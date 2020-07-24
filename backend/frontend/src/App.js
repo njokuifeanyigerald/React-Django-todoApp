@@ -21,7 +21,7 @@ class App extends Component {
     this.strikeUnStrike = this.strikeUnStrike.bind(this)
   };
 
-  componentDidMount(){
+  componentWillMount(){
     this.fetchTasks()
   }
 
@@ -143,7 +143,8 @@ class App extends Component {
     const tasks  = this.state.todoList;
     const self = this;
     return (
-      <div className="container">
+      <div>
+        <div className="container">
         <br/>
         <div className="text-center">
           <h1><b>BlackLivesMatter</b></h1>
@@ -185,6 +186,11 @@ class App extends Component {
           </div>
         </div>
       </div>
+      <div className="footer mt-4 text-center text-white">
+            BopGeek &copy; 2020
+      </div>
+    </div>
+      
     )
   }
 }
